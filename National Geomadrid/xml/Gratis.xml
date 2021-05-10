@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pagina>
+  <carga>Pantalla de carga</carga>
+  <menu>Menú lateral</menu>
+  <tiempo>Temperaturas</tiempo>
+  <planes>
+    <plan>1. Visita edificios emblemáticos de Madrid
+      <lugar>Templo de Debob</lugar>
+      <lugar>Ermita de San Antonio de la Florida</lugar>
+      <lugar>Palacio de Cristal del Retiro</lugar>
+      <lugar>Andén 0</lugar>
+      <lugar>Castillo de la Alameda</lugar>
+      <lugar>Espacio Telefónica</lugar>
+      <lugar>Casa Museo de Lope de Vega</lugar>
+      <lugar>Museo de la Casa de la Moneda</lugar> 
+    </plan>
+    <plan>2. Cambio de guardia en el Palacio Real</plan>
+    <plan>3. Disfrutar gratis de bonitas panorámicas de Madrid
+      <lugar>Corte Inglés de Callao</lugar>
+      <lugar>Parque Cerro del Tío Pío</lugar>
+      <lugar>Jardín de las Vistillas</lugar>
+      <lugar>Montaña del Príncipe Pío</lugar>
+    </plan>
+    <plan>4. Hacer un free tour por el centro de Madrid</plan>
+    <plan>5. Los parques de Madrid</plan>
+    <plan>6. Visitar museos de Madrid gratis</plan>
+    <plan>Otros planes gratis en Madrid</plan>
+  </planes>
+  <footer>
+        <contacto>Contáctanos</contacto>
+        <telefono>Número de telefono</telefono>
+        <redes>Redes sociales</redes>
+    </footer>
+</pagina>

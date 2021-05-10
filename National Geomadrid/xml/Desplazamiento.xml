@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pagina>
+  <carga>Pantalla de carga</carga>
+  <menu>Menú lateral</menu>
+  <tiempo>Temperaturas</tiempo>
+  <transportes>
+    <transporte>Todos</transporte>
+    <transporte>Metro</transporte>
+    <transporte>Renfe</transporte>
+    <transporte>Interurbano</transporte>
+    <transporte>Metro ligero</transporte>
+    <transporte>EMT</transporte>
+  </transportes>
+  <informaciontransporte>
+    <info>Todos</info>
+    <info>Metro</info>
+    <info>Renfe</info>
+    <info>Interurbano</info>
+    <info>Metro ligero</info>
+    <info>EMT</info>
+  </informaciontransporte>
+  <footer>
+        <contacto>Contáctanos</contacto>
+        <telefono>Número de telefono</telefono>
+        <redes>Redes sociales</redes>
+    </footer>
+</pagina>

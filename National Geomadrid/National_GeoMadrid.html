@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon de la página -->
+    <link rel="icon" type="image/png" href="img/favicon_7estrellas.png">
+
+    <!-- Pantalla de carga -->
+    <div class="centrado" id="onload">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
+    <!-- Título de la página en movimiento -->
+    <title>Esto es Madrid, mi ciudad, la de todos</title>
+
+    <!-- Enlaces de JavaScript y Jquery -->
+    <script type="text/javascript" src="js/titulo.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/mainturismo.js"></script>
+    <script src="js/irArriba.js"></script>
+    <script src="js/xml.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Enlace al XML de la página -->
+    <link rel="alternate" title="xml" href="xml/National_Geomadrid.xml" type="application/rss+xml">
+
+    <!-- Enlaces a webs para iconos y fuentes -->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- Caja de las cookies en la parte superior de la página -->
+    <div id="cajacookies">
+        <p><button onclick="aceptarCookies()" class="pull-right" style="margin-right: 5.5em;"><i class="fa fa-times"></i> Aceptar y cerrar éste mensaje</button>
+            
+        <!-- Texto cookies y enlace a la página de política de privacidad -->
+        Éste sitio web usa cookies, si permanece aquí acepta su uso. Puede leer más sobre el uso de cookies en nuestra <a href="./Subpáginas/Cookies/politica.html" target="_blank">política de privacidad</a>.
+        </p>
+    </div>
+
+    <!-- Ventana emergente -->
+    <div class="popup">
+
+        <!-- botón para cerrar ventana -->
+        <input type="checkbox" id="cerrar">        
+        <label for="cerrar" id="btn-cerrar"></label>
+        <div class="modal">
+
+            <!-- Contenido  ventana emergente -->
+            <div class="contenido">
+                <h2>Gracias por elegirnos!!!!    <i class="em em-blush" aria-role="presentation" aria-label="SMILING FACE WITH SMILING EYES"></i></h2>
+                <img id="palacioreal" src="./img/palacioreal.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- menú lateral animado -->
+    <input type="checkbox" class="checkbox" id="check">
+        <label class="menu" for="check">|||</label>
+        <div class="left-panel">
+            <ul>
+                <a href="./Subpáginas/Turismo/Turismo.html" target="_blank"><li>Qué visitar</li></a>
+                <a href="./Subpáginas/Desplazamiento/Desplazamiento.html" target="_blank"><li>Cómo desplazarse</li></a>
+                <a href="./Subpáginas/Gratis/Gratis.html" target="_blank"><li>Planes gratuitos</li></a>
+            </ul>
+        </div>
+
+        <!-- Parte principal o header de la página -->
+    <header class="header" id="inicio">
+        <div class="contenedor head">
+            <h1 class="titulo">Esto es Madrid, mi ciudad, la de todos</h1>
+            <h2 class="titulobajo">La página cultural madrileña, aprende lo mejor de Madrid.</h2>
+        </div>
+        
+    </header>
+
+    <!-- Contenido de la página -->
+    <main>
+        <section class="contenedor" id="info">
+            <h2 class="subtitulo">Información cultural</h2>
+
+            <!-- Bandera de madrid y enlaces a las subpáginas -->
+            <div class="contenedor-paginas">
+                <img src="img/bandera_madrid.png" alt="">
+                <div class="checklist-paginas">
+                    <div class="pagina">
+                        <h3 class="ppaginaa"><a style="text-decoration:none" href="./Subpáginas/Turismo/Turismo.html" target="_blank"><span class="number">1</span><marquee scrollamount="200" scrolldelay="2000">¿Qué no te puedes perder de Madrid?</marquee> </a></h3>
+                        <p> En esta web puedes encontrar lo más fascinante de Madrid. ¡Tan sólo quédate y disfruta!</p>
+                    </div>
+                    <div class="pagina">
+                        <h3 class="ppaginaa"><a style="text-decoration:none" href="./Subpáginas/Desplazamiento/Desplazamiento.html" target="_blank"><span class="number">2</span><marquee scrollamount="200" scrolldelay="2000">¿Cómo me puedo desplazar por Madrid?</marquee></a></h3>
+                        <p> En esta web puedes encontrar como moverte por Madrid. ¡Tan sólo quédate y disfruta!</p>
+                    </div>
+                    <div class="pagina">
+                        <h3 class="ppaginaa"><a style="text-decoration:none" href="./Subpáginas/Gratis/Gratis.html" target="_blank"><span class="number">3</span><marquee scrollamount="200" scrolldelay="2000">Planes culturales gratuitos por la ciudad</marquee></a></h3>
+                        <p> En esta web puedes encontrar lo planes gratuitos más interesantes de Madrid. ¡Tan sólo quédate y disfruta!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de imágenes de Madrid -->
+        <section class="galeria" id="madrid">
+        <h2 style="text-align:center; padding-bottom: 2em; padding-top: 2em;">Galería de imágenes de Madrid</h2>
+
+            <div class="row">
+            <div class="column">
+                <img src="img/oso_madronio.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="img/plaza_mayor.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="img/museo_prado.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="img/retiro.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="img/cuatro_torres.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="img/puerta_alcala.jpg" style="width:100%; justify-items: start;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+            </div>
+            </div>
+
+            <div id="myModal" class="img-galeria">
+            <span class="cerrar-img cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="img/oso_madronio.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="img/plaza_mayor.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="img/museo_prado.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="img/retiro.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="img/cuatro_torres.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="img/puerta_alcala.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+
+
+                <div class="column">
+                <img class="demo cursor" src="img/oso_madronio.jpg" style="width:100%" onclick="currentSlide(1)" alt="El oso y el madroño">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img/plaza_mayor.jpg" style="width:100%" onclick="currentSlide(2)" alt="Plaza Mayor">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img/museo_prado.jpg" style="width:100%" onclick="currentSlide(3)" alt="Museo del Prado">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img/retiro.jpg" style="width:100%" onclick="currentSlide(4)" alt="Parque del Retiro">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img/cuatro_torres.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cuatro Torres">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="img/puerta_alcala.jpg" style="width:98%; padding-bottom: 5em;" onclick="currentSlide(6)" alt="Puerta de Alcalá">
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Sección de turismo, arte y cultura con imágenes -->
+        <section class="contenedor">
+            <h2 class="subtitulo">Lo más interesante es</h2>
+            <section class="ar-cul-tur">
+                <div class="contenidoar-cul-tur">
+                    <img src="img/turismo.jpg" alt="">
+                    <h3 class="nombrear-cul-tur">Turismo</h3>
+                </div>
+                <div class="contenidoar-cul-tur">
+                    <img src="img/arte.jpg" alt="">
+                    <h3 class="nombrear-cul-tur">Arte</h3>
+                </div>
+                <div class="contenidoar-cul-tur">
+                    <img src="img/cultura.jpg" alt="">
+                    <h3 class="nombrear-cul-tur">Cultura</h3>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Botón animado inferior derecha de regreso al comienzo de la página -->
+    <a href="#inicio"><img src="img/iconfinder_arrow-up-01_186407.png" id="botonArriba"></a>
+
+    <table class="video">
+        <tr>
+            <td>
+                <iframe id="video" width="600" height="280" src="https://www.youtube.com/embed/198eyddEKPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+            </td>
+            <td>
+                <h4 id="texto">Madrid Barrio a Barrio es una serie documental que repasa la historia del desarrollo de Madrid, a través de sus barrios.</h4> <br><br>
+
+                <p id="texto">Desde las colonias del río hasta el Cerro del tío Pío en Vallecas, nos muestra cómo nació Madrid a orillas de su río y lo que ha ido significando el Manzanares para la ciudad a lo largo de los siglos. También hace una parada en el Palacio Real y en la Catedral de la Almudena, para pasear por el Madrid palaciego. La pradera de San Isidro, el parque de la Bombilla, las Vistillas, la Arganzuela... hasta llegar al parque lineal que desemboca en La Caja Mágica. Y más al este, el parque del Cerro del tío Pío, más conocido como las Siete Tetas, que ofrece uno de los atardeceres más bellos de la capital.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <hr><br><br>
+    
+    <!-- Código XML -->
+<section id="xml">
+    <h3 style="text-align: center; margin-bottom: 2%; color: rgb(0, 0, 0); padding-top: 3%;">Este es mi código XML</h3>
+    <div class="xml" style="background: #111111; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em 1.2em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%; color: #10f110;">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td><pre style="margin: 0; line-height: 125%">
+<span style="color: #ff6600; font-weight: bold; font-style: italic; background-color: #0f140f">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span style="color: #e24444; font-weight: bold">&lt;pagina&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;carga&gt;</span><p class="txt-p">Pantalla de carga</p><span style="color: #e24444; font-weight: bold">&lt;/carga&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;alertas&gt;</span>
+            <span style="color: #e24444; font-weight: bold">&lt;cookies&gt;</span><p class="txt-p"">Cookies</p><span style="color: #e24444; font-weight: bold">&lt;/cookies&gt;</span>
+            <span style="color: #e24444; font-weight: bold">&lt;popup&gt;</span><p class="txt-p"">Pop-up</p><span style="color: #e24444; font-weight: bold">&lt;/popup&gt;</span>
+            <span style="color: #e24444; font-weight: bold">&lt;menu&gt;</span><p class="txt-p"">Menú lateral</p><span style="color: #e24444; font-weight: bold">&lt;/menu&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;/alertas&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;principal&gt;</span>
+            <span style="color: #e24444; font-weight: bold">&lt;bandera&gt;</span><p class="txt-p"">Bandera con enlaces</p><span style="color: #e24444; font-weight: bold">&lt;/bandera&gt;</span>
+            <span style="color: #e24444; font-weight: bold">&lt;galeria&gt;</span><p class="txt-p"">Galería de imágenes de Madrid</p><span style="color: #e24444; font-weight: bold">&lt;/galeria&gt;</span>
+            <span style="color: #e24444; font-weight: bold">&lt;turismo&gt;</span><p class="txt-p"">Turismo, arte y cultura</p><span style="color: #e24444; font-weight: bold">&lt;/turismo&gt;</span>
+            <span style="color: #e24444; font-weight: bold">&lt;video&gt;</span><p class="txt-p"">Video con texto</p><span style="color: #e24444; font-weight: bold">&lt;/video&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;/principal&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;footer&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;contacto&gt;</span><p class="txt-p"">Contacto</p><span style="color: #e24444; font-weight: bold">&lt;/contacto&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;telefono&gt;</span><p class="txt-p"">Numero de telefono</p><span style="color: #e24444; font-weight: bold">&lt;/telefono&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;redes&gt;</span><p class="txt-p"">Redes sociales</p><span style="color: #e24444; font-weight: bold">&lt;/redes&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;/footer&gt;</span>
+ <span style="color: #e24444; font-weight: bold">&lt;/pagina&gt;</span>
+</pre></td></tr></table></div>
+
+            </td>
+        </tr>
+    </table>
+</div>
+</section>
+    <!-- Pie de página -->
+    <footer id="footer">
+        <div class="contenedor footer-content">
+                <div class="contacto">
+                    <h2 class="contactanos">Contáctanos</h2>
+                    <p>Síguenos en nuestras redes sociales</p>
+                </div>
+                <div class="telefono">
+                    <p class="tlf">Teléfono de contacto: +34 365 256 652</p>
+                </div>
+
+                <!-- Botones redondos de redes sociales -->
+                <div class="social-media">
+                    <a id="correo" href="https://www.google.com/intl/es/gmail/about/" target="_blank" class="social-media-icon">
+                        <i class='bx bxl-google'></i>
+                    </a>
+                    <a id="facebook" href="https://es-es.facebook.com/" target="_blank" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a id="twitter" href="https://twitter.com/?lang=es" target="_blank"class="social-media-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a id="instagram" href="https://www.instagram.com/" target="_blank" class="social-media-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="line"></div>
+    </footer>
+    
+</body>
+</html>
+

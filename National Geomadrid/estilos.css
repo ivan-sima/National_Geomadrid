@@ -1,0 +1,816 @@
+/* Estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Pantalla de carga */
+.hidden{
+    overflow: hidden;
+  }
+  
+  .centrado{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: #cef;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  
+  .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+  
+  .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+  
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  
+  @keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+  
+    50%,
+    100% {
+      top: 19px;
+      height: 26px;
+    }
+  }
+
+/* Estilo caja de cookies */
+#cajacookies {
+    box-shadow: 0px 0px 5px 5px #808080;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin-right: -15px;
+    margin-bottom: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+  
+  #cajacookies button {
+    color: black;
+  }
+
+  /* Estilo ventana emergente */
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    animation: modal 1s 2s forwards;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+.contenido {
+    position: fixed;
+    margin-left: 25%;
+    margin-top: 13%;
+    width: 50%;
+    height: 50%;
+    background-image: -webkit-repeating-linear-gradient(rgba(255, 255, 255, 0.699), rgba(123, 224, 255, 0.692) ,rgba(57, 255, 74, 0.699));
+    text-align: center;
+}
+
+.contenido h2{
+    margin-top: 3%;
+}
+
+/* Imagen ventana emergente */
+#palacioreal {
+    padding-top: 3%;
+}
+
+#palacioreal:hover {
+    transform: scale(1.1); 
+}
+
+/* Botón cerrar ventana emergente */
+#cerrar {
+    display: none;
+}
+
+#btn-cerrar {
+    margin-top: 3em;
+    margin-right: 9em;
+}
+
+#cerrar + label {
+    position: fixed;
+    color: #fff;
+    font-size: 25px;
+    z-index: 50;
+    background-image: url(./img/cerrarpopup.png);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    right: 10px;
+    cursor: pointer;
+    animation: modal 2s 3s forwards;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#cerrar:checked + label, #cerrar:checked ~ .modal {
+    display: none;
+}
+
+/* Control de la animación */
+@keyframes modal {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* Menú lateral */
+.menu{
+    width: 2.2rem;
+    height: 2.7rem;
+    background: #2EE3AD;
+    border-radius: 0.5rem;
+    position: fixed;
+    top: 50%;
+    left: 3%;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    transition: left 0.7s;
+}
+
+.checkbox:checked ~ .menu{
+    left: 40%;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+.left-panel {
+    width: 40%;
+    height: 100%;
+    background: -webkit-linear-gradient(#54bbc7,#2ee3ad,#9191F2);
+    background: -o-linear-gradient(#54bbc7,#2ee3ad,#9191F2);
+    background: linear-gradient(#54bbc7,#2ee3ad,#9191F2);
+    position: fixed;
+    top: 0;
+    left: -40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.4s;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.checkbox:checked ~.left-panel{
+    left: 0;
+    position: fixed;
+}
+.checkbox {
+    display: none;
+    position: fixed;
+}
+
+ul a {
+    color: #F7F7F7;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 0.5rem;
+    margin: 1rem 0;
+}
+
+li:hover {
+    color: white;
+    border: solid white;
+    border-width: 0 0.1rem;
+}
+
+/* Contenido para subtitulos */
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Para el header y su imagen de fondo */
+.header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(251, 194, 235, 0.486) 0%, hsla(218, 68%, 79%, 0.514) 100%), url(img/madrid_desde_arriba.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Distintos tipos de títulos */
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+    text-shadow: 0.1em 0.1em #333
+}
+
+.titulobajo{
+    font-weight: 300;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 0.13em 0.13em #333;
+}
+
+.subtitulo{
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Contenido de bandera y enlaces a subpáginas */
+.contenedor-paginas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-paginas img{
+    width: 40%;
+    border-radius: 25px;
+    box-shadow: 15px 15px 15px #999;
+}
+
+.checklist-paginas{
+    width: 45%;
+}
+
+.pagina{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.ppaginaa{
+    margin-bottom: 7px;
+    color: #29b7db;
+}
+
+.pagina:hover{
+    transform: scale(1.04);
+}
+
+/* Círculos de colores degradados en los enlaces a subpáginas */
+.number{
+    display: inline-block;
+    background-image: -webkit-linear-gradient(45deg, rgb(4, 0, 228) 25%, transparent 26%, transparent 40%, rgb(68, 68, 68) 75%);
+    background-image: linear-gradient(45deg, rgb(12, 162, 207) 25%, transparent 26%, transparent 45%, rgb(48, 133, 212) 75%);
+    background-size:9px 9px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+/* Galería de imágenes */
+
+.galeria {
+    box-sizing: border-box;
+    background-color: rgba(10, 80, 126, 0.199);
+}
+  
+  .row {
+      display: inline-block;
+      margin-left: 4em;
+  }
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    margin-left: 5%;
+  }
+  
+  /* Ventana Galería */
+  .img-galeria {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* Botón galería */
+  .cerrar-img {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .cerrar-img:hover,
+  .cerrar-img:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Botones desplazar galería */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Número imagen del deslizador */
+  .numbertext {
+    color: #00ff40;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .column img {
+      border-radius: 5%;
+      height: 180px;
+      width: 125px;
+      margin-bottom: 15%;
+  }
+
+  .mySlides img {
+    margin-bottom: -4px;
+    height: 600px;
+    width: 400px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+/* Sección de turismo, arte y cultura con imágenes */
+.ar-cul-tur{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenidoar-cul-tur{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenidoar-cul-tur img{
+    display: block;
+    margin: auto;
+    width: 80%;
+    border-radius: 5mm;
+}
+
+.nombrear-cul-tur{
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+ /*Boton de ir arriba*/
+
+ #botonArriba{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  /* Video documental y texto*/
+
+.video {
+    border-color: rgb(255, 255, 255);
+    margin-left: 8%;
+    margin-top: -2%;
+}
+#video {
+    margin-left: 4%;
+    margin-bottom: 5%;
+}
+
+#texto {
+    margin-left: 12%;
+    margin-top: -5%;
+    margin-right: 10%;
+    text-align: justify;
+}
+
+/* Código XML */
+#xml {
+    height: 20em;
+    background-image: linear-gradient(40deg, #498ca2 0%,#479aae 10%, #44abbd 20%, #40bfcd 30%,#3dd7df 40%, #3cf2f2 50%,    #43ffff 60%,#54ffff 70%, #6bffff 80%, #85ffff 90%, #a1ffff 100%);
+  }
+.xml {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+    height: 10em;
+    width: 30em;
+    background: rgb(0, 0, 0); 
+    overflow:auto;
+    border:solid rgb(46, 46, 46);
+    border-width:.1em .1em .1em 2em;
+    padding:.2em .6em;
+  }
+  .txt-p {
+    color: aliceblue;
+    display: inline;
+  }
+
+  /* Pie de página */
+footer{
+    background-image: linear-gradient(40deg, #a1ffff 0, #85ffff 10%, #6bffff 20%, #54ffff 30%, #43ffff 40%, #3cf2f2 50%, #3dd7df 60%, #40bfcd 70%, #44abbd 80%, #479aae 90%, #498ca2 100%);
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+
+.contacto{
+    width: 40%;
+    color: rgb(0, 0, 0);
+}
+
+.contactanos{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.contactanos+p{
+    font-weight: 500;
+}
+
+.telefono{
+    width: 60%;
+}
+
+/* Redes sociales */
+.social-media{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.social-media #correo {
+    background: #dd4b39;
+    color: white;
+}
+
+.social-media #facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.social-media #twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.social-media #instagram {
+    color: #fff;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.social-media-icon:hover{
+    opacity: 0.7;
+}
+
+/* Línea pie de página */
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+/* Ajuste a un máximo de 1200px */
+@media screen and (max-width: 1200px){
+    
+    .pop{
+        width: 300px;
+    }
+
+    #palacioreal {
+        width: 80%;
+    }
+
+    .video {
+        width: 80%;
+    }
+    #video {
+        width: 40%;
+    }
+    
+    #texto {
+        width: 80%;
+    }
+}
+
+/* Ajuste a un máximo de 800px */
+@media screen and (max-width: 800px){
+    
+    .pop{
+        width: 200px;
+    }
+
+    #palacioreal {
+        width: 80%;
+    }
+    
+    
+    .menu-navegacion{
+        width: 50vw;
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+
+    .contenedor-paginas img{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    
+    .checklist-paginas{
+        width: 80%;
+    }
+
+    .ar-cul-tur{
+        margin-bottom: 30px;
+    }
+
+    .img-galeria{
+        width: 45%;
+    }
+    
+    .agregarImagen{
+        width: 80%;
+    }
+
+    
+    .contenedor-paginas{
+        width: 80%;
+    }
+
+    .video {
+        width: 90%;
+    }
+    #video {
+        width: 40%;
+    }
+    
+    #texto {
+        width: 80%;
+    }
+    
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contactanos{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    
+}
+
+/* Ajuste a un máximo de 500px */
+@media screen and (max-width: 500px){
+    
+    .pop{
+        width: 100px;
+    }
+
+    #palacioreal {
+        width: 80%;
+    }
+    
+    .menu-navegacion{
+        width: 65vw;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .subtitulo{
+        font-size: 30px;
+    }
+
+    .img-galeria{
+        width: 95%;
+    }
+    
+    .agregar-imagen{
+        width: 90%;
+    }
+
+    .video {
+        width: 90%;
+    }
+    #video {
+        width: 95%;
+    }
+    
+    #texto {
+        width: 90%;
+    }
+
+    .social-media{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contactanos {
+        text-align: center;
+        width: 95%;
+        margin-bottom: 40px;
+    }
+    
+}
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pagina>
+  <carga>Pantalla de carga</carga>
+  <menu>Menú lateral</menu>
+  <tiempo>Temperaturas</tiempo>
+  <lugares>
+    <lugar>Museo del prado</lugar>
+    <lugar>Plaza Mayor</lugar>
+    <lugar>Gran vía, Callao y Sol</lugar>
+    <lugar>Palacio real de Aranjuez</lugar>
+    <lugar>Parque de El Capricho</lugar>
+    <lugar>Presa del Atazar</lugar>
+    <lugar>Alcalá de Henares</lugar>
+    <lugar>Templo de Debod</lugar>
+    <lugar>Jardines de Sabatini</lugar>
+  </lugares>
+  <ubicaciones>
+    <ubicacion>Museo del prado</ubicacion>
+    <ubicacion>Plaza Mayor</ubicacion>
+    <ubicacion>Gran vía, Callao y Sol</ubicacion>
+    <ubicacion>Palacio real de Aranjuez</ubicacion>
+    <ubicacion>Parque de El Capricho</ubicacion>
+    <ubicacion>Presa del Atazar</ubicacion>
+    <ubicacion>Alcalá de Henares</ubicacion>
+    <ubicacion>Templo de Debod</ubicacion>
+    <ubicacion>Jardines de Sabatini</ubicacion>
+  </ubicaciones>
+  <footer>
+        <contacto>Contáctanos</contacto>
+        <telefono>Número de telefono</telefono>
+        <redes>Redes sociales</redes>
+    </footer>
+</pagina>

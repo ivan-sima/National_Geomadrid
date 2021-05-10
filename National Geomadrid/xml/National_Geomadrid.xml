@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pagina>
+    <alertas>
+        <cookies>Cookies</cookies>
+        <popup>Pop-up</popup>
+        <menu>Menú lateral</menu>
+    </alertas>
+    <principal>
+        <bandera>Bandera con enlaces</bandera>
+        <galeria>Galería de imágenes de Madrid</galeria>
+        <turismo>Turismo, arte y cultura</turismo>
+        <video>Video con texto</video>
+    </principal>
+    <footer>
+        <contacto>Contáctanos</contacto>
+        <telefono>Número de telefono</telefono>
+        <redes>Redes sociales</redes>
+    </footer>
+</pagina>
+

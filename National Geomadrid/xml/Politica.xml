@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pagina>
+  <carga>Pantalla de carga</carga>
+  <politica>
+    <apartados>
+      <apartado>Información que es recogida</apartado>
+      <apartado>Uso de la información recogida</apartado>
+      <apartado>Cookies</apartado>
+      <apartado>Enlaces a Terceros</apartado>
+      <apartado>Control de su información personal</apartado>
+    </apartados>
+  </politica>
+</pagina>

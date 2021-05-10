@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Turismo.css">
+
+    <!-- Enlace al XML de la página -->
+    <link rel="alternate" title="xml" href="../../xml/Turismo.xml" type="application/rss+xml">
+
+    <!-- Favicon de la página -->
+    <link rel="icon" type="image/png" href="../../img/favicon_7estrellas.png">
+
+    <!-- Enlaces de JavaScript y Jquery -->
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/mainturismo.js"></script>
+    <script src="../../js/filtro.js"></script>
+    <script src="../../js/irArriba.js"></script>
+    <script src="../../js/ocultatxt.js"></script>
+    <script src="../../js/xml.js"></script>
+
+    <!-- Enlace para fuente -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Título de la página -->
+    <title>Qué debo visitar</title>
+</head>
+
+<body>
+
+    <!-- Pantalla de carga -->
+    <div class="centrado" id="onload">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
+    <!-- menú lateral animado -->
+    <input type="checkbox" class="checkbox" id="check">
+        <label class="menu" for="check">|||</label>
+        <div class="left-panel">
+            <ul>
+                <a href="../../National_GeoMadrid.html" target="_blank"><li>Inicio</li></a>
+                <a href="../Desplazamiento/Desplazamiento.html" target="_blank"><li>Cómo desplazarse</li></a>
+                <a href="../Gratis/Gratis.html" target="_blank"><li>Planes gratuitos</li></a>
+            </ul>
+        </div>
+
+        <!-- Parte principal que muestra el tiempo actual con enlace a página al hacer click -->
+    <section class="work contenedor" id="trabajo">
+        <nav id="atardecer">
+            <h3>El tiempo en madrid</h3>
+            <p class="after">¡Esperemos que no llueva y puedas disfrutar al aire libre!</p>
+            <p><strong>Madrid</strong></p>
+            <a target="_blank" href="https://hotelmix.es/weather/madrid-18119"><img src="https://w.bookcdn.com/weather/picture/5_18119_1_4_137AE9_250_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=582&anc_id=88238"  alt="booked.net"/></a>
+        </nav>
+        <br><br><br><hr>
+
+        <!-- Sección de lugares clasificados seleccionables -->
+        <section class="visitar">
+            <br><h3>Qué visitar</h3>
+            <p class="after">¡No puedes perderte ninguno de ellos!</p>
+            <div class="botones-work">
+                <ul>
+                    <li class="filter active" data-nombre='todos'>Todos</li>
+                    <li class="filter" data-nombre='centro'>Centro de Madrid</li>
+                    <li class="filter" data-nombre='afueras'>Afueras</li>
+                </ul>
+            </div>
+
+            <!-- Lugares clasificados -->
+            <div class="galeria-work">
+                <div class="cont-work centro">
+                    <div class="img-work">
+                        <img src="../../img/mprado.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#prado"><h4>Museo del Prado</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work centro">
+                    <div class="img-work">
+                        <img src="../../img/pzmayor.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#pmayor"><h4>Plaza Mayor</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work centro">
+                    <div class="img-work">
+                        <img src="../../img/gvia.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#granvia"><h4>Gran vía, Callao y Sol</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work afueras">
+                    <div class="img-work">
+                        <img src="../../img/aranjuez.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#aranjuez"><h4>Palacio real de Aranjuez</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work afueras">
+                    <div class="img-work">
+                        <img src="../../img/capricho.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#capricho"><h4>Parque de El Capricho</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work afueras">
+                    <div class="img-work">
+                        <img src="../../img/atazar.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#atazar"><h4>Presa del Atazar</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work afueras">
+                    <div class="img-work">
+                        <img src="../../img/henares.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#alcala"><h4>Alcalá de Henares</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work centro">
+                    <div class="img-work">
+                        <img src="../../img/debod.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#debod"><h4>Templo de Debod</h4></a>
+                    </div>
+                </div>
+                <div class="cont-work centro">
+                    <div class="img-work">
+                        <img src="../../img/sabatini.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <a href="#sabatini"><h4>Jardines de Sabatini</h4></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de ubicaciones que aparecen al hacer click sobre el texto -->
+        <section class="mapas">
+            <nav id="fondomapas">
+                <hr>
+                <h3>Ubicaciones</h3>
+                <p class="after">¡Para que no te desubiques!</p>
+                <div class="sitio" id="prado">
+                    <h6>Museo del Prado</h6>
+                    
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo1'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo1" style="display: none;">
+                        <iframe id="uprado" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.7772176936196!2d-3.6943157851055095!3d40.41378586374327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289d66d8a2ed%3A0x1094f07d93ad885a!2sMuseo%20Nacional%20del%20Prado!5e0!3m2!1ses!2ses!4v1619606407407!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="sitio" id="pmayor">
+                    <h6>Plaza Mayor</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo2'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo2" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6075.465646018606!2d-3.706371925309028!3d40.41476923610737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x49a63c540111181c!2sPlaza%20Mayor!5e0!3m2!1ses!2ses!4v1619606486853!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="sitio" id="granvia">
+                    <h6>Gran vía, Callao y Sol</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo3'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo3" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.5434540940664!2d-3.6990353851053266!3d40.418963663428464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287d6da3df33%3A0xe119406d894c5d21!2zQy8gR3JhbiBWw61hLCBNYWRyaWQ!5e0!3m2!1ses!2ses!4v1619606516228!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="sitio" id="aranjuez">
+                    <h6>Palacio real de Aranjuez</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo4'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo4" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.750017483401!2d-3.610440785117986!3d40.036360386609495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4205bb1a714d59%3A0xd31ec131a408fb35!2sPalacio%20Real%2C%2028300%20Aranjuez%2C%20Madrid!5e0!3m2!1ses!2ses!4v1619606557014!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="sitio" id="capricho">
+                    <h6>Parque de El Capricho</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo5'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo5" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9278401908314!2d-3.6012586851041277!3d40.454734061252054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422fcafdbfdaeb%3A0xd18c32b49b20a589!2sParque%20Del%20Capricho!5e0!3m2!1ses!2ses!4v1619606595279!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                    
+                <div class="sitio" id="atazar">
+                    <h6>Presa del Atazar</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo6'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo6" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48238.75983053475!2d-3.552785368657603!3d40.917445362706765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43e9e8f96fdf3b%3A0x389693ffeb28febe!2sEmbalse%20del%20Atazar!5e0!3m2!1ses!2ses!4v1619606632246!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                    
+                <div class="sitio" id="alcala">
+                    <h6>Alcalá de Henares</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo7'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo7" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48545.83286924785!2d-3.4016954723208097!3d40.49484983737494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424bd8c669e60b%3A0x555eb1454b21723!2sAlcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1619606659810!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            
+                <div class="sitio" id="debod">
+                    <h6>Templo de Debod</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo8'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo8" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9101.638797750807!2d-3.7200331779753424!3d40.424188750271625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42286e8bea1259%3A0x1d6ad9c64a7706ab!2sTemplo%20de%20Debod!5e0!3m2!1ses!2ses!4v1619606689630!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="sitio" id="sabatini">
+                    <h6>Jardines de Sabatini</h6>
+
+                    <!-- Llamada a función de JavaScript (desplegable) -->
+                    <a href="#" onclick="cambiar('ejemplo9'); return false;">Pincha aqui para ver la ubicación</a>
+                    <div id="ejemplo9" style="display: none;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.481489804486!2d-3.7161925851052753!3d40.420336063345054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287a7731addf%3A0xdae626504cda711!2sJardines%20de%20Sabatini!5e0!3m2!1ses!2ses!4v1619606720602!5m2!1ses!2ses" width="220" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </section>
+
+    <!-- Código XML -->
+<section id="xml">
+    <br><br><br><br>
+    <h3 style="justify-content: center; margin-left: 42%; margin-bottom: 2.5%;">Código XML de la página</h3>
+        <div class="xml" style="background: #111111; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em 1.2em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%; color: #10f110;">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></td><td><pre style="margin: 0; line-height: 125%">
+ <span style="color: #ff7b00; font-weight: bold; font-style: italic; background-color: #0f140f">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+ <span style="color: #e24444; font-weight: bold">&lt;pagina&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;carga&gt;</span><p class="txt-p">Pantalla de carga</p><span style="color: #e24444; font-weight: bold">&lt;/carga&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;menu&gt;</span><p class="txt-p"">Menú lateral</p><span style="color: #e24444; font-weight: bold">&lt;/menu&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;tiempo&gt;</span><p class="txt-p"">Temperautras</p><span 
+    style="color: #e24444; font-weight: bold">&lt;/tiempo&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;lugares&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Museo del prado</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Plaza Mayor</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Gran vía, Callao y Sol</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Palacio real de Aranjuez</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Parque de El Capricho</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Presa del Atazar</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Alcalá de Henares</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Templo de Debod</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;lugar&gt;</span><p class="txt-p"">Jardines de Sabatini</p><span style="color: #e24444; font-weight: bold">&lt;/lugar&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;/lugares&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;ubicaciones&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Museo del prado</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Plaza Mayor</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Gran vía, Callao y Sol</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Palacio real de Aranjuez</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Parque de El Capricho</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Presa del Atazar</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Alcalá de Henares</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Templo de Debod</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;ubicacion&gt;</span><p class="txt-p"">Jardines de Sabatini</p><span style="color: #e24444; font-weight: bold">&lt;/ubicacion&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;/ubicaciones&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;footer&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;contacto&gt;</span><p class="txt-p"">Contacto</p><span style="color: #e24444; font-weight: bold">&lt;/contacto&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;telefono&gt;</span><p class="txt-p"">Numero de telefono</p><span style="color: #e24444; font-weight: bold">&lt;/telefono&gt;</span>
+        <span style="color: #e24444; font-weight: bold">&lt;redes&gt;</span><p class="txt-p"">Redes sociales</p><span style="color: #e24444; font-weight: bold">&lt;/redes&gt;</span>
+    <span style="color: #e24444; font-weight: bold">&lt;/footer&gt;</span>
+ <span style="color: #e24444; font-weight: bold">&lt;/pagina&gt;</span>
+</pre></td></tr></table></div>
+
+            </td>
+        </tr>
+    </table>
+</div>
+</section>
+        <!-- Botón animado inferior derecha de regreso al comienzo de la página -->
+        <a href="#trabajo"><img src="../../img/iconfinder_arrow-up-01_186407.png" id="botonArriba"></a>
+
+        <!-- Pie de página -->
+        <footer id="footer">
+            <div class="contenedor footer-content">
+                    <div class="contact-us">
+                        <h2 class="brand"><a style="color:black; text-decoration: none;" href="https://tuguiadeviajes.neocities.org/" target="_blank">Contáctanos</a></h2>
+                        <p>Síguenos en nuestras redes sociales</p>
+                    </div>
+                    <div class="telefono">
+                        <p class="tlf">Teléfono de contacto: +34 365 256 652</p>
+                    </div>
+
+                    <!-- Botones figuras animadas de redes sociales -->
+                    <div class="wrapper">
+                        <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa fa-3x fa-google-plus"></i></a>
+                        <a href="http://www.facebook.com/" target="_blank"><i class="fa fa-3x fa-facebook-square"></i></a>
+                        <a href="http://www.twitter.com/" target="_blank"><i class="fa fa-3x fa-twitter-square"></i></a>
+                        <a href="http://www.instagram.com/" target="_blank"><i><img src="../../img/3721672-instagram_108066.png" alt=""></i></a>
+                      </div>
+            </div>
+            <div class="line"></div>
+        </footer>
+</body>
+</html>
